@@ -16,12 +16,16 @@ const AdminUsers = async () => {
             key={user.id}
           >
             <div className="h-[50px] w-[50px] relative rounded-full overflow-hidden">
-              <Image
-                src={user.image ? user.image : "/noavatar.png"}
-                alt={user.username}
-                fill
-                className="object-cover"
-              />
+              {user.image ? (
+                <Image
+                  src={user.image}
+                  alt={user.username}
+                  fill
+                  className="object-cover"
+                />
+              ) : (
+                <img src="/noavatar.png" />
+              )}
             </div>
 
             <h3 className="w-full truncate flex flex-col">

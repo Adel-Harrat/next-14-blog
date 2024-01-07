@@ -6,6 +6,7 @@ import AdminUsers from "@/components/adminUsers";
 import AdminPostForm from "@/components/adminPostForm";
 import AdminPosts from "@/components/adminPosts";
 import { auth } from "@/lib/auth";
+import AdminContacts from "@/components/adminContacts";
 
 const AdminPage = async () => {
   const session = await auth();
@@ -34,6 +35,18 @@ const AdminPage = async () => {
         }
       >
         <AdminPosts />
+      </Suspense>
+
+      <Suspense
+        fallback={
+          <p className="text-center text-sm text-zinc-500 italic uppercase flex items-center justify-center">
+            Loading contact messages...
+          </p>
+        }
+      >
+        <div className="col-span-2">
+          <AdminContacts />
+        </div>
       </Suspense>
     </Container>
   );

@@ -8,7 +8,7 @@ const Loading = () => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-8 h-8 animate-spin text-cyan-500"
+          className="w-8 h-8 animate-spin text-amber-500"
         >
           <path
             strokeLinecap="round"

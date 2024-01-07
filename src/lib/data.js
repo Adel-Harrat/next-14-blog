@@ -1,5 +1,5 @@
 import { connectToDb } from "./utils";
-import { Post, User } from "./models";
+import { Contact, Post, User } from "./models";
 import { unstable_noStore as noStore } from "next/cache";
 
 export async function getPosts() {
@@ -44,5 +44,16 @@ export async function getUsers() {
   } catch (error) {
     console.log(error);
     throw new Error("Failed to fetch users");
+  }
+}
+
+export async function getContactMessages() {
+  try {
+    connectToDb();
+    const messages = await Contact.find();
+    return messages;
+  } catch (error) {
+    console.log(error);
+    throw new Error("Failed to fetch contact messages");
   }
 }

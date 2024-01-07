@@ -21,7 +21,7 @@ const ContactForm = () => {
     const enteredMessage = messageInputRef.current.value;
 
     try {
-      const res = await fetch("http://localhost:3000/api/contact", {
+      const res = await fetch(`${process.env.SITE_URL}/api/contact`, {
         method: "POST",
         body: JSON.stringify({
           name: enteredName,
@@ -52,6 +52,8 @@ const ContactForm = () => {
     } catch (error) {
       // Toast an error
       toast.error("Something went wrong!");
+      console.log(error);
+      setIsLoading(false);
     }
   }
 
