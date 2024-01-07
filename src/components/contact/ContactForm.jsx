@@ -21,7 +21,7 @@ const ContactForm = () => {
     const enteredMessage = messageInputRef.current.value;
 
     try {
-      const res = await fetch(`${process.env.SITE_URL}/api/contact`, {
+      const res = await fetch(`https://next-14-blog.vercel.app/api/contact`, {
         method: "POST",
         body: JSON.stringify({
           name: enteredName,
