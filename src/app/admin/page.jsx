@@ -44,7 +44,7 @@ const AdminPage = async () => {
           </p>
         }
       >
-        <div className="col-span-2">
+        <div className="md:col-span-2">
           <AdminContacts />
         </div>
       </Suspense>

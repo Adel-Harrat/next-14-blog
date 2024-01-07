@@ -7,7 +7,9 @@ const AdminUsers = async () => {
 
   return (
     <div className="bg-zinc-800 rounded-xl">
-      <h2 className="text-center font-semibold text-2xl py-5">Users</h2>
+      <h2 className="pl-5 font-bold text-sm tracking-widest uppercase py-5 text-zinc-500">
+        Users
+      </h2>
 
       <ul className="px-5 pb-5 space-y-5">
         {users?.map((user) => (

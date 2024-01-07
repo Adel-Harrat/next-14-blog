@@ -13,7 +13,7 @@ const AdminContacts = async () => {
 
   return (
     <div className="bg-zinc-800 rounded-xl">
-      <h2 className="text-center font-semibold text-2xl py-5">
+      <h2 className="pl-5 font-bold text-sm tracking-widest uppercase py-5 text-zinc-500">
         Contact Messages
       </h2>
 
