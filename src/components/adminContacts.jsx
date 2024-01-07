@@ -21,12 +21,12 @@ const AdminContacts = async () => {
         {messages?.map((message) => (
           <li
             key={message.id}
-            className="grid grid-cols-3"
+            className="grid grid-cols-1 md:grid-cols-3"
           >
             <h3 className="font-bold text-xl">{message.name}</h3>
             <p className="text-zinc-500 text-sm">{message.email}</p>
             <p className="text-zinc-500 text-sm">{message.phone}</p>
-            <p className="col-start-2 row-start-1 row-span-2 col-span-2 bg-white p-5 rounded-lg text-zinc-800">
+            <p className="md:col-start-2 md:row-start-1 md:row-span-2 md:col-span-2 bg-white p-5 rounded-lg text-zinc-800 mt-3 md:mt-0">
               {message.message}
             </p>
           </li>
