@@ -8,6 +8,11 @@ import AdminPosts from "@/components/adminPosts";
 import { auth } from "@/lib/auth";
 import AdminContacts from "@/components/adminContacts";
 
+export const metadata = {
+  title: "Dashboard",
+  description: "This is the admin dashboard page",
+};
+
 const AdminPage = async () => {
   const session = await auth();
 

@@ -1,6 +1,11 @@
 import BlogPost from "@/components/blog/post/Post";
 import { getPosts } from "@/lib/data";
 
+export const metadata = {
+  title: "Blog",
+  description: "This is the blog page",
+};
+
 const BlogPage = async () => {
   const posts = await getPosts();
 
