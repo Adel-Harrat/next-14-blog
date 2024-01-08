@@ -28,6 +28,7 @@ const SinglePostPage = async ({ params }) => {
           className="object-cover block mx-auto"
           height={500}
           width={800}
+          priority
         />
       </div>
 
