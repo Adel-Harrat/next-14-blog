@@ -1,13 +1,17 @@
+"use client";
 import { formattedTime } from "@/lib/format-time";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
-const BlogPost = ({ post }) => {
-  const { slug, title, description, image, createdAt } = post;
-  console.log({ slug, title, description, image, createdAt });
+const BlogPost = ({ slug, title, description, image, createdAt }) => {
+  const router = useRouter();
 
   return (
-    <article className="bg-zinc-900 rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-all ease-in-out duration-200 w-full">
+    <article
+      onClick={() => router.push(`/blog/${slug}`)}
+      className="cursor-pointer bg-zinc-900 rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-all ease-in-out duration-200 w-full"
+    >
       <div className="h-56">
         {image && (
           <Image

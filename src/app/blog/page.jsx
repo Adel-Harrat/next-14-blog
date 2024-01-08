@@ -14,7 +14,11 @@ const BlogPage = async () => {
       {posts?.map((post) => (
         <BlogPost
           key={post.id}
-          post={post}
+          slug={post.slug}
+          title={post.title}
+          description={post.description}
+          image={post.image}
+          createdAt={post.createdAt}
         />
       ))}
     </section>
