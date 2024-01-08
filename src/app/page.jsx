@@ -44,6 +44,7 @@ const Home = () => {
               height={50}
               width={1000}
               className="grayscale mt-5"
+              priority
             />
           </div>
 

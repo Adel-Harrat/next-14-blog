@@ -18,6 +18,7 @@ const ContactPage = () => {
             alt="contact page"
             height={250}
             width={500}
+            priority
           />
         </div>
 

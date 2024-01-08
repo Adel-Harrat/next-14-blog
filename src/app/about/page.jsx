@@ -26,7 +26,7 @@ const AboutPage = () => {
             magnam libero similique dolore aliquid inventore ab rem?
           </p>
 
-          <div className="grid grid-cols-3 mt-10">
+          <div className="flex items-center justify-between mt-10 text-center md:max-w-md ">
             <div>
               <h5 className="text-3xl font-bold text-zinc-100 ">10k+</h5>
               <h6 className="text-xs uppercase font-semibold tracking-widest text-zinc-400/50 italic">
@@ -48,12 +48,13 @@ const AboutPage = () => {
           </div>
         </div>
 
-        <div className="mt-10 md:mt-0 flex items-center justify-center ">
+        <div className="mt-10 md:mt-0 flex items-center justify-center w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] md:w-full md:h-auto relative mx-auto">
           <Image
             src="/about.png"
             alt="about page"
-            height={250}
-            width={500}
+            fill
+            className="object-contain"
+            priority
           />
         </div>
       </Container>
